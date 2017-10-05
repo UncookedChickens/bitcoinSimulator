@@ -1,0 +1,2 @@
+# bitcoinSimulator
+Simulate the bitcoin
