@@ -9,5 +9,9 @@ public class randomEvents {
 		// This is where random events are made
 		
 	}
+	
+	public static void trend() {
+		
+	}
 
 }
