@@ -10,8 +10,18 @@ public class randomEvents {
 		
 	}
 	
-	public static void trend() {
+	public static int trend() {
+		Random r = new Random();
+		int change, direction;
 		
+		change = r.nextInt(501);
+		direction = r.nextInt(25) + 1;
+		
+		if(direction<10){
+			change = change * -1;
+		}
+		
+		return change;
 	}
 
 }
