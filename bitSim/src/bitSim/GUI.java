@@ -17,6 +17,7 @@ public class GUI extends JFrame implements ActionListener {
 	
 	private JPanel contentPane;
 	private JTextField textField;
+	private String text;
 
 	/**
 	 * Launch the application.
@@ -38,6 +39,8 @@ public class GUI extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public GUI() {
+		text = "hello";
+		
 		setTitle("I dunno, something");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 500);
@@ -50,6 +53,7 @@ public class GUI extends JFrame implements ActionListener {
 		textField.setBounds(12, 13, 625, 427);
 		contentPane.add(textField);
 		textField.setColumns(10);
+		textField.equals(text);
 		
 		JButton btn = new JButton("Next Week");
 		btn.setActionCommand("btn");
@@ -62,8 +66,10 @@ public class GUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		String eventName = e.getActionCommand();
 	
-		if(eventName.equals("btn")){
-			textField.equals("hello");
+		for(int i = 0; i < 52; i++){
+			if(eventName.equals("btn")){
+				textField.equals("hello");
+			}
 		}
 	}
 }
