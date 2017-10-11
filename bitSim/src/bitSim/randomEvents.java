@@ -7,7 +7,6 @@ public class randomEvents {
 	public static int randomEvent() {
 		Random r = new Random();
 		int chance, change=0;
-		
 		chance = r.nextInt(100)+1;
 		
 		if(chance<=4){
