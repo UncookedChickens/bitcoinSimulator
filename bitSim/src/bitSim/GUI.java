@@ -18,7 +18,7 @@ public class GUI extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private String text;
-	int price;
+	private int price, week;
 
 	/**
 	 * Launch the application.
@@ -40,7 +40,8 @@ public class GUI extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public GUI() {
-		text = "hello";
+		text = "Week ";
+		week = 0;
 		price = 4500;
 		
 		setTitle("I dunno, something");
@@ -73,10 +74,11 @@ public class GUI extends JFrame implements ActionListener {
 	
 		for(int i = 0; i < 52; i++){
 			if(eventName.equals("btn")){
+				textField.equals(text +week +": " +price);
 				
 				event.trend(price);
+				week ++;
 				
-				textField.equals("hello");
 			}
 		}
 	}
