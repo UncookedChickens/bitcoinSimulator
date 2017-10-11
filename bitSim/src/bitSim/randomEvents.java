@@ -4,10 +4,21 @@ import java.util.Random;
 
 public class randomEvents {
 
-	public static void randomEvent() {
+	public static int randomEvent() {
 		Random r = new Random();
-		// This is where random events are made
+		int chance, change=0;
 		
+		chance = r.nextInt(100)+1;
+		
+		if(chance<=4){
+			change = r.nextInt(1500-500+1) + 500;
+		}
+		
+		if(chance==1 || chance==2){
+			change = change * -1;
+		}
+		
+		return change;
 	}
 	
 	public static int trend() {
