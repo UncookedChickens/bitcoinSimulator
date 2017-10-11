@@ -2,6 +2,8 @@ package bitSim;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,7 +12,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class GUI extends JFrame {
+public class GUI extends JFrame implements ActionListener {
 	
 	
 	private JPanel contentPane;
@@ -49,8 +51,19 @@ public class GUI extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
-		JButton btnNewButton = new JButton("Next Week");
-		btnNewButton.setBounds(709, 30, 97, 43);
-		contentPane.add(btnNewButton);
+		JButton btn = new JButton("Next Week");
+		btn.setActionCommand("btn");
+		btn.addActionListener(this);
+		btn.setBounds(709, 30, 97, 43);
+		contentPane.add(btn);
+	}
+	
+	
+	public void actionPerformed(ActionEvent e) {
+		String eventName = e.getActionCommand();
+	
+		if(eventName.equals("btn")){
+			textField.equals("hello");
+		}
 	}
 }
