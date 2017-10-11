@@ -74,10 +74,10 @@ public class GUI extends JFrame implements ActionListener {
 	
 		for(int i = 0; i < 52; i++){
 			if(eventName.equals("btn")){
-				textField.equals(text +week +": " +price);
-				
-				event.trend(price);
+				event.trend(price);//makes starting price random
 				week ++;
+				
+				textField.equals(text +week +": " +price);
 				
 			}
 		}
