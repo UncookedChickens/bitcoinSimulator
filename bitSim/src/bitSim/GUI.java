@@ -18,6 +18,7 @@ public class GUI extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private String text;
+	int price;
 
 	/**
 	 * Launch the application.
@@ -40,6 +41,7 @@ public class GUI extends JFrame implements ActionListener {
 	 */
 	public GUI() {
 		text = "hello";
+		price = 4500;
 		
 		setTitle("I dunno, something");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,10 +66,16 @@ public class GUI extends JFrame implements ActionListener {
 	
 	
 	public void actionPerformed(ActionEvent e) {
+		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
+		
+		
 	
 		for(int i = 0; i < 52; i++){
 			if(eventName.equals("btn")){
+				
+				event.trend(price);
+				
 				textField.equals("hello");
 			}
 		}

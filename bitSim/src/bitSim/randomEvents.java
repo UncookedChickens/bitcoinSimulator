@@ -20,7 +20,7 @@ public class randomEvents {
 		return change;
 	}
 	
-	public static int trend() {
+	public static int trend(int price) {
 		Random r = new Random();
 		int change, direction;
 		
@@ -31,7 +31,9 @@ public class randomEvents {
 			change = change * -1;
 		}
 		
-		return change;
+		price += change;
+		
+		return price;
 	}
 
 }
