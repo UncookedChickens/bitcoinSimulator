@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class randomEvents {
 
-	public static int randomEvent() {
-		Random r = new Random(int price);
+	public static int randomEvent(int price) {
+		Random r = new Random();
 		int chance, change=0;
 		chance = r.nextInt(100)+1;
 		
