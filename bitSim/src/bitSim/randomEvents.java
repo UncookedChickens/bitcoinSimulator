@@ -5,7 +5,7 @@ import java.util.Random;
 public class randomEvents {
 
 	public static int randomEvent() {
-		Random r = new Random();
+		Random r = new Random(int price);
 		int chance, change=0;
 		chance = r.nextInt(100)+1;
 		
