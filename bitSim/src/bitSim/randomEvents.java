@@ -33,6 +33,25 @@ public class randomEvents {
 		
 		price += change;
 		
+		
+		
+		int chance;
+		chance = r.nextInt(100)+1;
+		
+		if(chance<=4){
+			change = r.nextInt(1500-500+1) + 500;
+		}
+		
+		if(chance==1 || chance==2){
+			change = change * -1;
+		}
+		
+		System.out.println(chance);
+		
+		price += change;
+		
+		System.out.println(price);
+		
 		return price;
 	}
 
