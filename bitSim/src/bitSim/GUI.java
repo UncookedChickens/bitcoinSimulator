@@ -56,7 +56,7 @@ public class GUI extends JFrame implements ActionListener {
 		textField.setBounds(12, 13, 625, 427);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		textField.equals(text);
+		textField.setText("Week: ");
 		
 		JButton btn = new JButton("Next Week");
 		btn.setActionCommand("btn");
@@ -77,7 +77,7 @@ public class GUI extends JFrame implements ActionListener {
 				event.randomEvent(price);//makes starting price random
 				week ++;
 				
-				textField.equals(text +week +": " +price);
+				textField.setText(text + week + ": " +price);
 				
 			}
 		}
