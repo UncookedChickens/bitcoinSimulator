@@ -64,7 +64,6 @@ public class GUI extends JFrame implements ActionListener {
 		contentPane.add(btn);
 	}
 	
-	
 	public void actionPerformed(ActionEvent e) {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
