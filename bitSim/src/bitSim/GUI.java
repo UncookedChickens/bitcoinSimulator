@@ -17,7 +17,6 @@ public class GUI extends JFrame implements ActionListener {
 	
 	private JPanel contentPane;
 	private JTextField textField;
-	private String text;
 	private int price, week;
 
 	/**
@@ -40,9 +39,9 @@ public class GUI extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public GUI() {
-		text = "Week ";
-		week = 0;
 		price = 4500;
+		week = 1;
+		
 		
 		setTitle("I dunno, something");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -56,7 +55,7 @@ public class GUI extends JFrame implements ActionListener {
 		textField.setBounds(12, 13, 625, 427);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		textField.equals(text);
+		textField.setText("Week " + week + ": " + price);
 		
 		JButton btn = new JButton("Next Week");
 		btn.setActionCommand("btn");
@@ -69,17 +68,14 @@ public class GUI extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
-		
-		
 	
-		for(int i = 0; i < 52; i++){
-			if(eventName.equals("btn")){
-				event.randomEvent(price);//makes starting price random
-				week ++;
-				
-				textField.equals(text +week +": " +price);
-				
-			}
+		
+		if(eventName.equals("btn")){
+			price = event.trend(price);//makes starting price random
+			week ++;
+			
+			textField.setText("Week " + week + ": " + price);
+			
 		}
 	}
 }
