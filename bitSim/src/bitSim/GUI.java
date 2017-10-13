@@ -80,6 +80,6 @@ public class GUI extends JFrame implements ActionListener {
 				textField.equals(text +week +": " +price);
 				
 			}
-		}
+		}	
 	}
 }
