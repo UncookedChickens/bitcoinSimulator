@@ -56,7 +56,7 @@ public class GUI extends JFrame implements ActionListener {
 		textField.setBounds(12, 13, 625, 427);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		textField.setText("Week: ");
+		textField.setText(text);
 		
 		JButton btn = new JButton("Next Week");
 		btn.setActionCommand("btn");
