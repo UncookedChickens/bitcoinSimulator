@@ -30,11 +30,7 @@ public class randomEvents {
 			change = change * -1;
 		}
 		
-		System.out.println(chance);
-		
 		price += change;
-		
-		System.out.println(price);
 		
 		return price;
 	}
