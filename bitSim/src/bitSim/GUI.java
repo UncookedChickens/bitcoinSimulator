@@ -20,6 +20,8 @@ public class GUI extends JFrame implements ActionListener {
 	private JLabel out;
 	
 	private int price, week;
+	private JButton btnNewButton;
+	private JButton btnNewButton_1;
 
 	/**
 	 * Launch the application.
@@ -54,14 +56,26 @@ public class GUI extends JFrame implements ActionListener {
 		contentPane.setLayout(null);
 		
 		out = new JLabel("Week " + week + ": " + price);
-		out.setBounds(140, 182, 91, 16);
+		out.setBounds(540, 43, 91, 16);
 		contentPane.add(out);
 		
-		JButton btn = new JButton("Next Week");
-		btn.setActionCommand("btn");
-		btn.addActionListener(this);
-		btn.setBounds(709, 30, 97, 43);
-		contentPane.add(btn);
+		JButton nextWeek = new JButton("Next Week");
+		nextWeek.setActionCommand("btn");
+		nextWeek.addActionListener(this);
+		nextWeek.setBounds(709, 30, 97, 43);
+		contentPane.add(nextWeek);
+		
+		JButton buy = new JButton("Buy");
+		buy.setActionCommand("buy");
+		buy.addActionListener(this);
+		buy.setBounds(709, 86, 97, 43);
+		contentPane.add(buy);
+		
+		JButton sell = new JButton("Sell");
+		sell.setActionCommand("sell");
+		sell.addActionListener(this);
+		sell.setBounds(709, 142, 97, 43);
+		contentPane.add(sell);
 	}
 	
 	
