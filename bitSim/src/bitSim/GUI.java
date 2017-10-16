@@ -78,7 +78,6 @@ public class GUI extends JFrame implements ActionListener {
 		contentPane.add(sell);
 	}
 	
-	
 	public void actionPerformed(ActionEvent e) {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
