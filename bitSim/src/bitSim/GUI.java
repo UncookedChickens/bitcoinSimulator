@@ -17,11 +17,9 @@ public class GUI extends JFrame implements ActionListener {
 	
 	
 	private JPanel contentPane;
-	private JLabel out, walletDisplay;
+	private JLabel out, walletDisplay, bitcoinWallet;
 	
-	private int price, week, wallet, bitcoins;
-	private JButton btnNewButton;
-	private JButton btnNewButton_1;
+	private int price, week, wallet, bitcoins = 0;
 
 	/**
 	 * Launch the application.
@@ -60,9 +58,13 @@ public class GUI extends JFrame implements ActionListener {
 		out.setBounds(540, 43, 91, 16);
 		contentPane.add(out);
 		
-		walletDisplay = new JLabel("Wallet " +walletDisplay + ": " + wallet);
-		walletDisplay.setBounds(564, 126, 56, 16);
+		walletDisplay = new JLabel("Wallet " + ": " + wallet);
+		walletDisplay.setBounds(540, 72, 131, 16);
 		contentPane.add(walletDisplay);
+		
+		bitcoinWallet = new JLabel("bitcoins " + ": " + bitcoins);
+		bitcoinWallet.setBounds(540, 101, 131, 16);
+		contentPane.add(bitcoinWallet);
 		
 		JButton nextWeek = new JButton("Next Week");
 		nextWeek.setActionCommand("btn");
@@ -101,6 +103,8 @@ public class GUI extends JFrame implements ActionListener {
 				bitcoins++;
 			}
 			
+			walletDisplay.setText("Wallet " + ": " + wallet);
+			bitcoinWallet.setText("bitcoins " + ": " + bitcoins);
 		}
 		
 		if(eventName.equals("sell")){
@@ -109,6 +113,9 @@ public class GUI extends JFrame implements ActionListener {
 				wallet+=price;
 				bitcoins--;
 			}
+			
+			walletDisplay.setText("Wallet " + ": " + wallet);
+			bitcoinWallet.setText("bitcoins " + ": " + bitcoins);
 		}
 	}
 }
