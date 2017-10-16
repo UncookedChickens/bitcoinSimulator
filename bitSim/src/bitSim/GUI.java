@@ -19,7 +19,7 @@ public class GUI extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JLabel out, walletDisplay;
 	
-	private int price, week, wallet;
+	private int price, week, wallet, bitcoins;
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 
@@ -45,6 +45,7 @@ public class GUI extends JFrame implements ActionListener {
 	public GUI() {
 		price = 4500;
 		week = 1;
+		wallet = 10000;
 		
 		
 		setTitle("I dunno, something");
@@ -95,10 +96,19 @@ public class GUI extends JFrame implements ActionListener {
 		
 		if(eventName.equals("buy")){
 			
+			if(wallet>=price){
+				wallet-=price;
+				bitcoins++;
+			}
+			
 		}
 		
 		if(eventName.equals("sell")){
 			
+			if(bitcoins>0){
+				wallet+=price;
+				bitcoins--;
+			}
 		}
 	}
 }
