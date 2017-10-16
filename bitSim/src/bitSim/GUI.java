@@ -89,7 +89,7 @@ public class GUI extends JFrame implements ActionListener {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
 	
-		if(eventName.equals("btn")){
+		if(eventName.equals("btn") && week < 52){
 			price = event.trend(price);//makes starting price random
 			week ++;
 			
