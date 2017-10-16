@@ -17,7 +17,7 @@ public class GUI extends JFrame implements ActionListener {
 	
 	
 	private JPanel contentPane;
-	private JLabel out;
+	private JLabel out, wallet;
 	
 	private int price, week;
 	private JButton btnNewButton;
@@ -58,6 +58,10 @@ public class GUI extends JFrame implements ActionListener {
 		out = new JLabel("Week " + week + ": " + price);
 		out.setBounds(540, 43, 91, 16);
 		contentPane.add(out);
+		
+		wallet = new JLabel("New label");
+		wallet.setBounds(564, 126, 56, 16);
+		contentPane.add(wallet);
 		
 		JButton nextWeek = new JButton("Next Week");
 		nextWeek.setActionCommand("btn");
