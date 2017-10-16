@@ -11,12 +11,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class GUI extends JFrame implements ActionListener {
 	
 	
 	private JPanel contentPane;
-	private JTextField textField;
+	private JLabel out;
+	
 	private int price, week;
 
 	/**
@@ -51,11 +53,9 @@ public class GUI extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		textField = new JTextField();
-		textField.setBounds(12, 13, 625, 427);
-		contentPane.add(textField);
-		textField.setColumns(10);
-		textField.setText("Week " + week + ": " + price);
+		out = new JLabel("Week " + week + ": " + price);
+		out.setBounds(140, 182, 91, 16);
+		contentPane.add(out);
 		
 		JButton btn = new JButton("Next Week");
 		btn.setActionCommand("btn");
@@ -74,8 +74,7 @@ public class GUI extends JFrame implements ActionListener {
 			price = event.trend(price);//makes starting price random
 			week ++;
 			
-			textField.setText("Week " + week + ": " + price);
-			
+			out.setText("Week " + week + ": " + price);
 		}
 	}
 }
