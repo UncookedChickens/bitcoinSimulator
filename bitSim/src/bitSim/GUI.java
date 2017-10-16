@@ -17,9 +17,9 @@ public class GUI extends JFrame implements ActionListener {
 	
 	
 	private JPanel contentPane;
-	private JLabel out, wallet;
+	private JLabel out, walletDisplay;
 	
-	private int price, week;
+	private int price, week, wallet;
 	private JButton btnNewButton;
 	private JButton btnNewButton_1;
 
@@ -59,9 +59,9 @@ public class GUI extends JFrame implements ActionListener {
 		out.setBounds(540, 43, 91, 16);
 		contentPane.add(out);
 		
-		wallet = new JLabel("New label");
-		wallet.setBounds(564, 126, 56, 16);
-		contentPane.add(wallet);
+		walletDisplay = new JLabel("Wallet " +walletDisplay + ": " + wallet);
+		walletDisplay.setBounds(564, 126, 56, 16);
+		contentPane.add(walletDisplay);
 		
 		JButton nextWeek = new JButton("Next Week");
 		nextWeek.setActionCommand("btn");
@@ -86,12 +86,19 @@ public class GUI extends JFrame implements ActionListener {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
 	
-		
 		if(eventName.equals("btn")){
 			price = event.trend(price);//makes starting price random
 			week ++;
 			
 			out.setText("Week " + week + ": " + price);
+		}
+		
+		if(eventName.equals("buy")){
+			
+		}
+		
+		if(eventName.equals("sell")){
+			
 		}
 	}
 }
