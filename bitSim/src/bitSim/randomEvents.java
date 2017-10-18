@@ -5,7 +5,7 @@ import java.util.Random;
 public class randomEvents {
 	
 	public static int trend(int price) {//changes the price of bitcoin
-		// Initialise random number generator, and initialise variables
+		// Initialize random number generator, and initialize variables
 		Random r = new Random();
 		int change, direction;
 		
@@ -22,7 +22,7 @@ public class randomEvents {
 		price += change;
 		
 		
-		// initialise chance variable and assign it a random number under 100
+		// Initialize chance variable and assign it a random number under 100
 		int chance;
 		chance = r.nextInt(100)+1;
 		
