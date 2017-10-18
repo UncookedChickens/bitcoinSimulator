@@ -85,18 +85,22 @@ public class GUI extends JFrame implements ActionListener {
 		contentPane.add(sell);
 	}
 	
+	/**
+	 * 
+	 */
+	
 	public void actionPerformed(ActionEvent e) {
 		randomEvents event = new randomEvents();
 		String eventName = e.getActionCommand();
 	
 		if(eventName.equals("btn") && week < 52){
-			price = event.trend(price);//makes starting price random
+			price = event.trend(price);//changes the price of bitcoin
 			week ++;
 			
 			out.setText("Week " + week + ": " + price);
 		}
 		
-		if(eventName.equals("buy")){
+		if(eventName.equals("buy")){//buys bitcoins
 			
 			if(wallet>=price){
 				wallet-=price;
@@ -107,7 +111,7 @@ public class GUI extends JFrame implements ActionListener {
 			bitcoinWallet.setText("bitcoins " + ": " + bitcoins);
 		}
 		
-		if(eventName.equals("sell")){
+		if(eventName.equals("sell")){//sells bitcoins
 			
 			if(bitcoins>0){
 				wallet+=price;
