@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class randomEvents {
 	
-	public static int trend(int price) {
+	public static int trend(int price) {//changes the price of bitcoin
 		Random r = new Random();
 		int change, direction;
 		
